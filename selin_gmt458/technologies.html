@@ -1,6 +1,16 @@
 <section>
-    <h2>Places I've Visited</h2>
-    <p>Here are the cities I've explored:</p>
+    <header>
+        <h1>Places I've Visited</h1>
+        <nav>
+            <ul>
+                <li><a href="background.html">Back Home</a></li>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Here are the cities I've explored:</h2>
     <div id="map" style="width: 100%; height: 400px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></div>
 </section>
 
@@ -48,7 +58,35 @@
 </script>
 
 <style>
-    /* Marker (İşaretleyici) için stil */
+    /* Geri Dönüş Butonları */
+    nav ul {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        background-color: #ff69b4;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: #ff1493; /* Hover (üzerine gelince) rengi */
+    }
+
+    /* Harita İçin İşaretleyici (Marker) */
     .marker {
         width: 20px;
         height: 20px;
