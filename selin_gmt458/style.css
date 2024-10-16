@@ -1,13 +1,19 @@
-/* Body ve genel arka plan */
+/* Genel Ayarlar */
 body {
-    background-color: #fce4ec; /* Hafif pastel pembe */
+    background-color: #f8e6e9; /* Pastel pembe arka plan */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    animation: backgroundChange 10s infinite alternate; /* Arka plan animasyonu */
 }
 
+/* Arka plan rengi geçiş efekti */
+@keyframes backgroundChange {
+    0% { background-color: #f8e6e9; }
+    100% { background-color: #f3d9e1; }
+}
 
-/* Ana içerik genişliği */
+/* Genel içerik düzeni */
 header, section, footer {
     max-width: 1200px;
     margin: 0 auto;
@@ -20,23 +26,34 @@ header, section, footer {
 
 /* Header */
 header {
-    background-color: #f8bbd0; /* Daha pastel ve yumuşak bir pembe */
+    background-color: #f4afc7; /* Pastel pembe ton */
     text-align: center;
     padding: 30px 0;
     border-radius: 0 0 15px 15px;
 }
 
-/* Başlık için stil (Glow efekti dahil) */
+/* Selin's Blog başlığı */
 header h1 {
     font-size: 3rem;
     color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
-    animation: glow 1.5s infinite alternate;
+    margin: 20px 0;
+    animation: glow 1.5s infinite alternate; /* Parıltı efekti */
 }
 
-/* Menü düzeni */
+/* Glow efekti */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ffcdd2, 0 0 20px #f8bbd0, 0 0 30px #f48fb1, 0 0 40px #ff80ab, 0 0 50px #ff4081, 0 0 60px #ff80ab, 0 0 70px #f48fb1;
+    }
+    100% {
+        text-shadow: 0 0 20px #f8bbd0, 0 0 30px #ff80ab, 0 0 40px #ff4081, 0 0 50px #ff80ab, 0 0 60px #f48fb1, 0 0 70px #ffcdd2, 0 0 80px #f8bbd0;
+    }
+}
+
+/* Menü */
 nav ul {
     display: flex;
     justify-content: center;
@@ -53,7 +70,7 @@ nav ul li a {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
-    background-color: #ff69b4;
+    background-color: #f06292; /* Pastel pembe butonlar */
     color: white;
     font-weight: bold;
     border-radius: 5px;
@@ -61,12 +78,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #ff1493; /* Hover (üzerine gelince) rengi */
+    background-color: #ff80ab;
+    transform: scale(1.1);
 }
 
 /* İçerik bölüm */
 section {
-    background-color: #fce4ec; /* Hafif pembe arka plan */
+    background-color: #fff5f8; /* Hafif pastel arka plan */
     padding: 40px;
     margin: 20px auto;
     border-radius: 15px;
@@ -74,67 +92,21 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* İçerik başlığı */
+/* Başlık */
 section h2 {
-    color: #ff4081; /* Pastel pembe başlık */
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: #ff4081; /* Pastel pembe */
     font-weight: bold;
     text-align: center;
-}
-
-/* Footer stilini geliştir */
-/* Footer */
-footer {
-    background-color: #f8bbd0; /* Pastel tonlu arka plan */
-    text-align: center;
-    padding: 15px;
-    border-radius: 15px 15px 0 0;
-}
-
-/* Mobil cihazlar için daha iyi görünüm */
-@media (max-width: 768px) {
-    header, section, footer {
-        max-width: 100%;
-        border-radius: 0;
-        box-shadow: none;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-}
-
-
-/* About Me kısmı için stil */
-section {
-    text-align: center; /* İçeriği ortala */
-    padding: 40px;
-    background-color: #fff5f8; /* Hafif bir arka plan rengi */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölgeli efekt */
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-/* About Me başlığı için stil */
-section h2 {
-    font-size: 2rem;
-    color: #ff1493;
     margin-bottom: 20px;
-    font-weight: bold;
 }
 
-/* Metin stili */
+/* Metin */
 section p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #333;
-    margin-top: 20px;
     line-height: 1.5;
+    text-align: center;
 }
 
 /* Profil resmi */
@@ -167,36 +139,77 @@ section p {
 }
 
 .social-icon:hover {
-    transform: scale(1.2); /* Üzerine gelince hafif büyütme efekti */
+    transform: scale(1.2);
 }
 
-
-/* Selin's Blog başlığı için stil */
-header h1 {
-    font-size: 3rem;
-    color: white; /* Başlık rengi beyaz yapıldı */
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-    margin: 20px 0;
-    animation: glow 1.5s infinite alternate;
-}
-
-/* Glow efekti */
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 10px #ffcdd2, 0 0 20px #f8bbd0, 0 0 30px #f48fb1, 0 0 40px #ff80ab, 0 0 50px #ff4081, 0 0 60px #ff80ab, 0 0 70px #f48fb1;
-    }
-    100% {
-        text-shadow: 0 0 20px #f8bbd0, 0 0 30px #ff80ab, 0 0 40px #ff4081, 0 0 50px #ff80ab, 0 0 60px #f48fb1, 0 0 70px #ffcdd2, 0 0 80px #f8bbd0;
-    }
-}
-
-/* hacettepe Logo için stil */
+/* Hacettepe logo */
 .logo {
-    width: 60px; /* Logonun genişliğini ayarlayın */
+    width: 60px;
     height: auto;
-    vertical-align: middle; /* Yazı ile aynı hizada tutar */
-    margin-left: 10px; /* Yazı ile logo arasında boşluk bırakır */
+    display: block;
+    margin: 20px auto;
+}
+
+/* Dil ikonları */
+.languages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.languages a {
+    margin: 0 10px;
+}
+
+/* Portföy ve deneyim kartları */
+.project-grid, .experience-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+.project-card, .experience-card {
+    width: 250px;
+    padding: 20px;
+    background-color: #fef9fd;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover, .experience-card:hover {
+    transform: translateY(-10px);
+    background-color: #f8e6e9;
+}
+
+.project-card h4, .experience-card h4 {
+    font-size: 1.5rem;
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+.project-card p, .experience-card p {
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Mobil cihazlar için düzenleme */
+@media (max-width: 768px) {
+    header, section, footer {
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
 }
