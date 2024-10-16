@@ -1,0 +1,202 @@
+/* Body ve genel arka plan */
+body {
+    background-color: #fce4ec; /* Hafif pastel pembe */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Ana içerik genişliği */
+header, section, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    background-color: #f8bbd0; /* Daha pastel ve yumuşak bir pembe */
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Başlık için stil (Glow efekti dahil) */
+header h1 {
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Menü düzeni */
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #ff69b4;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff1493; /* Hover (üzerine gelince) rengi */
+}
+
+/* İçerik bölüm */
+section {
+    background-color: #fce4ec; /* Hafif pembe arka plan */
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* İçerik başlığı */
+section h2 {
+    color: #ff4081; /* Pastel pembe başlık */
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Footer stilini geliştir */
+/* Footer */
+footer {
+    background-color: #f8bbd0; /* Pastel tonlu arka plan */
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Mobil cihazlar için daha iyi görünüm */
+@media (max-width: 768px) {
+    header, section, footer {
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* About Me kısmı için stil */
+section {
+    text-align: center; /* İçeriği ortala */
+    padding: 40px;
+    background-color: #fff5f8; /* Hafif bir arka plan rengi */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölgeli efekt */
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* About Me başlığı için stil */
+section h2 {
+    font-size: 2rem;
+    color: #ff1493;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Metin stili */
+section p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/* Profil resmi */
+.profile-pic {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sosyal medya linkleri stil */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Üzerine gelince hafif büyütme efekti */
+}
+
+
+/* Selin's Blog başlığı için stil */
+header h1 {
+    font-size: 3rem;
+    color: white; /* Başlık rengi beyaz yapıldı */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin: 20px 0;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Glow efekti */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ffcdd2, 0 0 20px #f8bbd0, 0 0 30px #f48fb1, 0 0 40px #ff80ab, 0 0 50px #ff4081, 0 0 60px #ff80ab, 0 0 70px #f48fb1;
+    }
+    100% {
+        text-shadow: 0 0 20px #f8bbd0, 0 0 30px #ff80ab, 0 0 40px #ff4081, 0 0 50px #ff80ab, 0 0 60px #f48fb1, 0 0 70px #ffcdd2, 0 0 80px #f8bbd0;
+    }
+}
+
+/* hacettepe Logo için stil */
+.logo {
+    width: 60px; /* Logonun genişliğini ayarlayın */
+    height: auto;
+    vertical-align: middle; /* Yazı ile aynı hizada tutar */
+    margin-left: 10px; /* Yazı ile logo arasında boşluk bırakır */
+}
