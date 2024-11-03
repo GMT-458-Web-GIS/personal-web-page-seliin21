@@ -1,0 +1,406 @@
+/* Genel Ayarlar */
+body {
+    background-color: #f8e6e9; /* Pastel pembe arka plan */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    animation: backgroundChange 10s infinite alternate; /* Arka plan animasyonu */
+}
+
+/* Arka plan rengi geçiş efekti */
+@keyframes backgroundChange {
+    0% { background-color: #f8e6e9; }
+    100% { background-color: #f3d9e1; }
+}
+
+/* Genel içerik düzeni */
+header, section, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    background-color: #f4afc7; /* Pastel pembe ton */
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Selin's Blog başlığı */
+header h1 {
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin: 20px 0;
+    animation: glow 1.5s infinite alternate; /* Parıltı efekti */
+}
+
+/* Glow efekti */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ffcdd2, 0 0 20px #f8bbd0, 0 0 30px #f48fb1, 0 0 40px #ff80ab, 0 0 50px #ff4081, 0 0 60px #ff80ab, 0 0 70px #f48fb1;
+    }
+    100% {
+        text-shadow: 0 0 20px #f8bbd0, 0 0 30px #ff80ab, 0 0 40px #ff4081, 0 0 50px #ff80ab, 0 0 60px #f48fb1, 0 0 70px #ffcdd2, 0 0 80px #f8bbd0;
+    }
+}
+
+/* Menü */
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #f06292; /* Pastel pembe butonlar */
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff80ab;
+    transform: scale(1.1);
+}
+
+/* İçerik bölüm */
+section {
+    background-color: #fff5f8; /* Hafif pastel arka plan */
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlık */
+section h2 {
+    font-size: 2.5rem;
+    color: #ff4081; /* Pastel pembe */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Metin */
+section p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Profil resmi */
+.profile-pic {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sosyal medya linkleri stil */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Hacettepe logo */
+.logo {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Dil ikonları */
+.languages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.languages a {
+    margin: 0 10px;
+}
+
+/* Portföy ve deneyim kartları */
+.project-grid, .experience-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+.project-card, .experience-card {
+    width: 250px;
+    padding: 20px;
+    background-color: #fef9fd;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover, .experience-card:hover {
+    transform: translateY(-10px);
+    background-color: #f8e6e9;
+}
+
+.project-card h4, .experience-card h4 {
+    font-size: 1.5rem;
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+.project-card p, .experience-card p {
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Mobil cihazlar için düzenleme */
+@media (max-width: 768px) {
+    header, section, footer {
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Hobby kartlarının düzeni */
+.hobby-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.hobby-card {
+    background-color: #fff5f8;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px); /* Hover efekti ile kart yükselir */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-card h3 {
+    color: #ff4081; /* Başlık rengi */
+    margin-top: 10px;
+}
+
+.hobby-card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+.hobby-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hobby-img:hover {
+    transform: scale(1.05); /* Resme hover efekti */
+}
+
+
+/* Hobby kartlarının düzeni */
+.hobby-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.hobby-card {
+    background-color: #fff5f8;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    max-width: 250px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px); /* Hover efekti ile kart yükselir */
+    background-color: #ffe4e1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-card h3 {
+    color: #ff4081; /* Başlık rengi */
+    margin-top: 10px;
+}
+
+.hobby-card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Küçük ekranlar için daha iyi görünüm */
+@media (max-width: 768px) {
+    .hobby-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hobby-card {
+        max-width: 90%;
+    }
+}
+
+
+/* Header stili */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4afc7;
+    color: white;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Başlık stili */
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Menü stili */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    background-color: #f06292;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff80ab;
+    transform: scale(1.1);
+}
+
+/* Genel stil */
+body {
+    background-color: #f8e6e9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Hobiler kart düzeni */
+.hobby-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.hobby-card {
+    background-color: #fff5f8;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+    background-color: #ffe4e1;
+}
+
+.hobby-card h3 {
+    color: #ff4081;
+    margin-bottom: 10px;
+}
+
+.hobby-card p {
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    .hobby-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hobby-card {
+        max-width: 90%;
+    }
+}
